@@ -9,6 +9,9 @@ class MonkServer < MUDServe
 	def serve(io)
 		io.print "\377\373\31" #IAC DO NAWS
 		puts "-- #{io.peeraddr} connected to the Mudmonk server!"
+
+
+
 		for eachline in draw_monk do  
 			io.puts eachline
 			sleep 0.05
