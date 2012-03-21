@@ -2,11 +2,11 @@
 require 'logger'
 require 'gserver'
 
-SERVER_NAME = 'Genesis'
-PORT_NO = 8081
+SERVER_NAME    = 'Genesis'
+PORT_NO        = 8081
 MonkServerName = "MUDMonk Server '#{SERVER_NAME}'"
 MudMonkVersion = "v0.0.1"
-HELP = "Type: <esc> to quit and 'help?' for a list of commands"
+HELP = "Type: <esc> to quit and '<C-h>' for a list of commands"
 
 class MUDServe < GServer
   #Start Logger
