@@ -17,8 +17,8 @@ class MUDServe < GServer
 	
   #Close Client connection
   def quit
-    io.puts "Shorel'aran"
-    exit #Just for method display sake.
+    io.puts "Shorel'aran\n"
+    #Just for method display sake.
   end
 	
   #Draw Monk pic

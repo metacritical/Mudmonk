@@ -1,6 +1,6 @@
 require './controller/mudserve'
 require './controller/scrn_handler'
-#require './controller/scrn_handler'
+require './controller/keyb_handler'
 
 class MonkServer < MUDServe
   def initialize(port,*args)
@@ -29,7 +29,7 @@ class MonkServer < MUDServe
       case character
       when "1b" #<esc> Character
         io.print "\x8\x8"
-        io.print "Shorel 'aran\n'"
+        io.print "Shorel 'aran\n"
         self.stop
         
       when "41" #"A"
