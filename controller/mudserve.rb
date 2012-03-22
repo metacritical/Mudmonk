@@ -14,13 +14,7 @@ class MUDServe < GServer
     log = Logger.new('log/monkserver.log','daily')
     log.level = Logger::WARN
   end
-	
-  #Close Client connection
-  def quit
-    io.puts "Shorel'aran\n"
-    #Just for method display sake.
-  end
-	
+		
   #Draw Monk pic
   def draw_monk
     monk_pic = File.read('views/monk.pic').split(/\n/)

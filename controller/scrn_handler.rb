@@ -7,8 +7,4 @@ class InitScreen
   def initialize
     @screen_area = []
   end
-
-  def run
-      
-  end
 end
