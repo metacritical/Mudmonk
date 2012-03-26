@@ -1,4 +1,8 @@
+require './controller/commands_module'
+
 class KeyboardHandler
+include Commands
+
   def initialize(io)
     @io = io
   end
@@ -23,7 +27,6 @@ class KeyboardHandler
       character = @io.getbyte.to_s(16)
       #multi_bytes = @io.bytes.each {|i| i.to_s(16) }
       
-
       case character
 
 ###################
@@ -64,6 +67,7 @@ class KeyboardHandler
         io_print "\x8"+"K"
 
       when "4c" #"L" Character
+
         io_print "\x8"+"L"
 
       when "4d" #"M" Character
@@ -203,14 +207,13 @@ class KeyboardHandler
       when "8" #"C-h" combination keypress
         io_print "\x8\x8"
         io_puts "Help commands : blah..blah.."
-        io_print "\n~> "
+        io_print "\n~> "+"\x8"
         
       when "7f" #Backspace
         io_print "\x8\x8\x8"
-        
-        
+          
       when "4" #Delete  #C-d
-        io_print "\x8\x8Hey Delete"
+        io_print "\x8\x8 Hey Delete"
 
 
 ##########################
@@ -321,10 +324,22 @@ class KeyboardHandler
 
       when "60" #Symbols '`'
         io_print "\x8" + "`"
+
+      when "10" #Symbols 'UP'
+        io_print key_up
+       
+      when "e" #Symbols 'DOWN'
+        io_print key_down
+       
+      when "6" #Symbols 'BACKWARD'
+        io_print key_left
+       
+      when "2" #Symbols 'FORWARD"
+        io_print key_right
        
       else
         #byte_array ||= [] << character.each_byte {|i| i.to_s(16)}
-        io_print character
+        io_print character + "\x8\x8"
       end
     end
   end

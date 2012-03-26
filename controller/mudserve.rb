@@ -17,7 +17,7 @@ class MUDServe < GServer
 		
   #Draw Monk pic
   def draw_monk
-    monk_pic = File.read('views/monk.pic').split(/\n/)
+    monk_pic = File.read('views/ascii_monk.pic').split(/\n/)
     #FG Red (\e[31m) and BG Blue (\e[44m).
     out ||= [] << "\e[44m\e[31mWelcome to #{MonkServerName} #{MudMonkVersion}\n\e[0m"
     out << HELP
