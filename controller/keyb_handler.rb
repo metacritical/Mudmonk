@@ -1,47 +1,47 @@
-require './controller/commands_module'
+require_relative '../controller/commands_module'
 
 class KeyboardHandler
-include Commands
-
+  include Commands
+  
   def initialize(io)
     @io = io
   end
-
+  
   def read_data
     multi_bytes = @io.bytes.each do |i|
       i.to_s(16)
     end
   end
-
+  
   def io_print p_str
     @io.print p_str
   end
-
+  
   def io_puts str
     @io.puts str
   end
 
-
+  
   def run
     loop do
       character = @io.getbyte.to_s(16)
       #multi_bytes = @io.bytes.each {|i| i.to_s(16) }
       
       case character
-
-###################
-#Capital Aplhabets#
-###################
+        
+        ###################
+        #Capital Aplhabets#
+        ###################
         
       when "41" #"A" Character
         io_print "\x8"+"A"
-               
+        
       when "42" #"B" Character
         io_print "\x8"+"B"
-
+        
       when "43" #"C" Character
         io_print "\x8"+"C"
-
+        
       when "44" #"D" Character
         io_print "\x8"+"D"
 

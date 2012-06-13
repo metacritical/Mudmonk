@@ -1,6 +1,6 @@
-require './controller/mudserve'
-require './controller/scrn_handler'
-require './controller/keyb_handler'
+require_relative './controller/mudserve'
+require_relative './controller/scrn_handler'
+require_relative './controller/keyb_handler'
 
 class MonkServer < MUDServe
 
