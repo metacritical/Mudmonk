@@ -14,7 +14,7 @@ class MUDServe < GServer
     log = Logger.new('log/monkserver.log','daily')
     log.level = Logger::WARN
   end
-		
+
   #Draw Monk pic
   def draw_monk
     monk_pic = File.read('views/ascii_monk.pic').split(/\n/)
@@ -29,11 +29,11 @@ class MUDServe < GServer
     out << "\e[0m" #reset color
     out
   end
-	
+
   ##############################
   # Find Current cursor position
   ##############################
-	
+
   def find_cur_position
     "\e[6n  \e[c  \e[0c" 
   end

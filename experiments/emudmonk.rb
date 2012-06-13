@@ -20,15 +20,15 @@ module MudServer
     begin
       #send_data data.methods
       send_data eval data
-      raise SyntaxError 
-    rescue SyntaxError 
-    rescue NoMethodError 
+      raise SyntaxError
+    rescue SyntaxError
+    rescue NoMethodError
     rescue NameError
     rescue ArgumentError
     end
     send_data "\n~> "
   end
-	
+
   def exit
     self.close_connection
     puts "-- someone was disconnected from Mudmonk server!"

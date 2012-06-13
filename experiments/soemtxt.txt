@@ -10,14 +10,13 @@
 	#term_input = IO.select([io],nil.nil,0)
 #	io.puts io.lineno= 10 #rescue NoMethodError
 	#while( character != ?\C-x)
-	
-	
+
 		#end
 	#end
 	#case character
 	#	when ?\C-x
 	#		io.print "What goes up must come down ...";
 	#		exit;
-	#	else	
+	#	else
 	#		io.print "#{term_input.chr} [#{term_input}] (hex: #{term_input.to_s(16)})";
 	#end
