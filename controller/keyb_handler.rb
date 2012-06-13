@@ -26,16 +26,16 @@ include Commands
     loop do
       character = @io.getbyte.to_s(16)
       #multi_bytes = @io.bytes.each {|i| i.to_s(16) }
-      
+
       case character
 
 ###################
 #Capital Aplhabets#
 ###################
-        
+
       when "41" #"A" Character
         io_print "\x8"+"A"
-               
+
       when "42" #"B" Character
         io_print "\x8"+"B"
 
@@ -327,16 +327,16 @@ include Commands
 
       when "10" #Symbols 'UP'
         io_print key_up
-       
+
       when "e" #Symbols 'DOWN'
         io_print key_down
-       
+
       when "6" #Symbols 'BACKWARD'
         io_print key_left
-       
+
       when "2" #Symbols 'FORWARD"
         io_print key_right
-       
+
       else
         #byte_array ||= [] << character.each_byte {|i| i.to_s(16)}
         io_print character + "\x8\x8"

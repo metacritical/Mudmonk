@@ -8,13 +8,13 @@ class MonkServer < MUDServe
     super(port,*args)
     start_logger
   end
-			
+
   def serve(io)
     #Initialize Keyboard Handler
-    
+
     #io.print "\377\373\31" #IAC DO NAWS
     puts "-- #{io.peeraddr} connected to the Mudmonk server!"
-    for eachline in draw_monk do  
+    for eachline in draw_monk do
       io.puts eachline
       sleep 0.05 #just a little delay for animation like effect
     end
