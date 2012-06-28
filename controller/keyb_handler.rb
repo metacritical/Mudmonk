@@ -1,7 +1,7 @@
-require_relative '../controller/commands_module'
+#require_relative '../controller/commands_module'
 
 class KeyboardHandler
-  include Commands
+  #include Commands
   
   def initialize(io)
     @io = io

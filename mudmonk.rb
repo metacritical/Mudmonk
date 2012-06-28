@@ -1,6 +1,6 @@
-require_relative './controller/mudserve'
-require_relative './controller/scrn_handler'
-require_relative './controller/keyb_handler'
+require_relative 'controller/mudserve'
+require_relative 'controller/scrn_handler'
+require_relative 'controller/keyb_handler'
 
 class MonkServer < MUDServe
 
@@ -19,7 +19,7 @@ class MonkServer < MUDServe
       sleep 0.05 #just a little delay for animation like effect
     end
 
-    puts io.methods.sort  #methods to use
+    puts io.fileno  #methods to use
     io.puts "Bal'a dash, Malanore" #msg send to telnet client
     io.print "\377\373\3" # send IAC WILL SUPPRESS-GOAHEAD
     #io.print "\e[?3" # Set number of columns to 132

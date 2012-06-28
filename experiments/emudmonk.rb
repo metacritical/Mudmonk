@@ -1,9 +1,9 @@
 require 'rubygems'
 require 'eventmachine'
-require_relative 'controller/commands'
+#require_relative 'controller/commands'
 
 module MudServer
-  include Commands
+ #include Commands
   def post_init
     $SAFE = 2
     puts "-- someone connected to the Mudmonk server!"
