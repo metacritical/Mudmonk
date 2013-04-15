@@ -16,11 +16,12 @@ module MudServer
   end
 
   def receive_data data
-    send_data "=> "
     begin
       #send_data data.methods
-      send_data eval data
+      temp  = eval data
+      send_data "=> #{temp}"
       raise SyntaxError
+    rescue SecurityError
     rescue SyntaxError
     rescue NoMethodError
     rescue NameError

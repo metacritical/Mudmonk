@@ -20,7 +20,6 @@ class KeyboardHandler
   def io_puts str
     @io.puts str
   end
-
   
   def run
     loop do
