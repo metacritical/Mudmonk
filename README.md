@@ -4,3 +4,8 @@
 
 ## Code :
 It is a work in Progress ..... soon to be released
+
+
+#TODO
+VT100 Docs from 
+![VT100](https://vt100.net/docs/vt100-ug/contents.html)
